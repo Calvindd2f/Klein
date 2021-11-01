@@ -1,24 +1,28 @@
-# Klein
-Calvin Security Learning stuff lol
+    # Klein
+    Calvin Security Learning stuff lol
+    NOTEBOOK sorta, slightly unorganized, catagorized but could be neater.
+
+    "-" is a makeshift bulletpoint, not apart of whats typed after. eg 
+    -  'lol = "'lol" 
+    and not =/=
+    "-  'lol"
 
 
-NOTEBOOK sorta, slightly unorganized, catagorized but could be neater.
 
-"-" is a makeshift bulletpoint, not apart of whats typed after. eg 
 
--  'lol = "'lol" 
-  
-and not =/=
 
-"-  'lol"
 
-#SQL Injection
 
-SQLi is a security weakness which allows attackers to control and applications database and allowing them to,
-for instance modify data or change the database applications behaviour by tricking the database into allowing 
-sending SQL commands.
+    #SQL Injection
 
-Some I like to give a crack are;
+    SQLi is a security weakness which allows attackers to control and applications database and allowing them to,
+    for instance modify data or change the database applications behaviour by tricking the database into allowing 
+    sending SQL commands.
+
+    Some I like to give a crack are;
+
+
+
 
 Generic SQL Injection Payloads
 
