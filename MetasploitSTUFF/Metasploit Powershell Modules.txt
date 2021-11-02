@@ -1,0 +1,14 @@
+              Metasploit Powershell Modules
+            
+
+    #Metasploit powershell payload delivery module
+-   use exploit/multi/script/web_delivery
+
+    #Metasploit upload and run powershell script through a sessios
+-   post/windows/manage/powershell/exec_powershell
+
+    #Metasploit MSSQL payload
+-   use exploit/windows/mssql/mssql_payload
+
+
+        
