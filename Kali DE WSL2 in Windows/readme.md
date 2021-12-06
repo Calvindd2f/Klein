@@ -1,15 +1,25 @@
-###Install Kali Linux in WSL 2### - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-#First, install the Windows Subsystem for Linux by executing the following two commands. Alternatively, you can also search for “Turn
-Windows Features on or off”. Then you click on “Windows Subsystem for Linux” and “Virtual Machine Platform”. 
+###Install Kali Linux in WSL 2### 
+
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+#First, install the Windows Subsystem for Linux by executing the following two commands. 
+
+Alternatively, you can also search for “Turn Windows Features on or off”. 
+Then you click on “Windows Subsystem for Linux” and “Virtual Machine Platform”. 
 
 
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart 
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 
-#Windows want’s you to restart your PC. After you did that you can now download the WSL 2 Kernel Modules and install the package:
+#Windows want’s you to restart your PC. 
+After you did that you can now download the WSL 2 Kernel Modules and install the package:
 https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
-#Also, don’t forget to set WSL 2 as your default version with the following command: 
 
+#Also, don’t forget to set WSL 2 as your default version with the following command: 
 wsl --set-default-version 2
 
 
@@ -55,10 +65,11 @@ sudo apt install kali-linux-large
 
 
 Use the desktop environment in Kali Linux WSL 2
-#seamless mode is probably a good choice for most people
-# kex --sl -s 
-#Window Mode with VNC# kex -s 
-#Window Mode with RDP# kex --esm -s
+seamless mode is probably a good choice for most people
+
+kex --sl -s 
+Window Mode with VNC# kex -s 
+Window Mode with RDP# kex --esm -s
 
 
 how to install wsl 2 with all hacking tools a list of all kali tools: https://tools.kali.org/tools-listing
@@ -115,3 +126,18 @@ https://pas.chinacloudapi.cn – For Azure RBAC flows.
 So this was a really good time for me to take a step back; and decide how I wanted to set up moving forward. 
 I found that I really enjoy using kali in seamless mode. I am able to drag and drop from windows to kali; with root access. 
 All of the GUI applications work seamlessly, yet separately running sandbox'd from eachother. . . It really is " kali windows". and though this most likely isnt how I will end up with my final set up; I felt I needed to share this because of how EASY it is to install. [# tutorial here: https://discord.com/channels/883825581114945566/884147996260982804/888317732871888927] I feel like so many of you would grow and our community would benefit from our newbies and skids having access to these tools! full list of kali tools:https://tools.kali.org/tools-listing
+
+
+
+]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]][[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+
+
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+wsl --set-default-version 2
+winget install -e --id kalilinux.kalilinux
+user@kali:~$ sudo apt update
+user@kali:~$ sudo apt install -y kali-win-kex
+user@kali:~$ sudo apt install -y kali-linux-large
