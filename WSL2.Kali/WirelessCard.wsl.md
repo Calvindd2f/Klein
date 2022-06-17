@@ -16,5 +16,6 @@
     *If it still doesn't work, change the nameserver in /etc/resolve.conf to a different DNS like Google (8.8.8.8) or Cloudflare (1.1.1.1)  
 
 
-       _Microsoft AR9271 Drivers for windows are below._  
-# https://www.catalog.update.microsoft.com/Search.aspx?q=Atheros%20AR9271  
+         <#       _Microsoft AR9271 Drivers for windows are below.  
+         _https://www.catalog.update.microsoft.com/Search.aspx?q=Atheros%20AR9271  
+                                                                                    #>
