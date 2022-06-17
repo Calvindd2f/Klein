@@ -15,6 +15,6 @@
     *If it doesn't try reopening WSL  
     *If it still doesn't work, change the nameserver in /etc/resolve.conf to a different DNS like Google (8.8.8.8) or Cloudflare (1.1.1.1)  
       
-                 _Microsoft AR9271 Drivers for windows are below.  
-         _https://www.catalog.update.microsoft.com/Search.aspx?q=Atheros%20AR9271  
+                 Microsoft AR9271 Drivers for windows are below.  
+         https://www.catalog.update.microsoft.com/Search.aspx?q=Atheros%20AR9271  
                                                                                      
